@@ -34,56 +34,6 @@
       ],
       "correctOption": 0,
       "points": 10
-    },
-    {
-      "question": "How to pass data into a child component?",
-      "options": ["State", "Props", "PropTypes", "Parameters"],
-      "correctOption": 1,
-      "points": 10
-    },
-    {
-      "question": "When to use derived state?",
-      "options": [
-        "Whenever the state should not trigger a re-render",
-        "Whenever the state can be synchronized with an effect",
-        "Whenever the state should be accessible to all components",
-        "Whenever the state can be computed from another state variable"
-      ],
-      "correctOption": 3,
-      "points": 30
-    },
-    {
-      "question": "What triggers a UI re-render in React?",
-      "options": [
-        "Running an effect",
-        "Passing props",
-        "Updating state",
-        "Adding event listeners to DOM elements"
-      ],
-      "correctOption": 2,
-      "points": 20
-    },
-    {
-      "question": "When do we directly \"touch\" the DOM in React?",
-      "options": [
-        "When we need to listen to an event",
-        "When we need to change the UI",
-        "When we need to add styles",
-        "Almost never"
-      ],
-      "correctOption": 3,
-      "points": 20
-    },
-    {
-      "question": "In what situation do we use a callback to update state?",
-      "options": [
-        "When updating the state will be slow",
-        "When the updated state is very data-intensive",
-        "When the state update should happen faster",
-        "When the new state depends on the previous state"
-      ],
-      "correctOption": 3,
-      "points": 30
     }
   ],
   "vuejs": [
@@ -116,46 +66,6 @@
       "options": ["Props", "State", "Events", "Methods"],
       "correctOption": 0,
       "points": 10
-    },
-    {
-      "question": "What is Vuex used for?",
-      "options": ["Routing", "State management", "Styling", "Testing"],
-      "correctOption": 1,
-      "points": 10
-    },
-    {
-      "question": "Which lifecycle hook is called after the component is mounted?",
-      "options": ["created", "mounted", "updated", "destroyed"],
-      "correctOption": 1,
-      "points": 10
-    },
-    {
-      "question": "What is the purpose of the 'v-model' directive?",
-      "options": [
-        "Two-way data binding",
-        "Event handling",
-        "Conditional rendering",
-        "Looping"
-      ],
-      "correctOption": 0,
-      "points": 10
-    },
-    {
-      "question": "How do you define a method in a Vue component?",
-      "options": ["methods", "computed", "watch", "data"],
-      "correctOption": 0,
-      "points": 10
-    },
-    {
-      "question": "What is the purpose of the 'v-bind' directive?",
-      "options": [
-        "Binding HTML attributes",
-        "Event handling",
-        "Conditional rendering",
-        "Looping"
-      ],
-      "correctOption": 0,
-      "points": 10
     }
   ],
   "angular": [
@@ -186,51 +96,6 @@
     {
       "question": "How do you pass data to a child component in Angular?",
       "options": ["@Input", "@Output", "@State", "@Props"],
-      "correctOption": 0,
-      "points": 10
-    },
-    {
-      "question": "What is Angular CLI used for?",
-      "options": [
-        "Routing",
-        "State management",
-        "Project scaffolding",
-        "Testing"
-      ],
-      "correctOption": 2,
-      "points": 10
-    },
-    {
-      "question": "Which lifecycle hook is called after the component is initialized?",
-      "options": ["ngOnInit", "ngAfterViewInit", "ngOnChanges", "ngOnDestroy"],
-      "correctOption": 0,
-      "points": 10
-    },
-    {
-      "question": "What is the purpose of the 'ngModel' directive?",
-      "options": [
-        "Two-way data binding",
-        "Event handling",
-        "Conditional rendering",
-        "Looping"
-      ],
-      "correctOption": 0,
-      "points": 10
-    },
-    {
-      "question": "How do you define a service in Angular?",
-      "options": ["@Injectable", "@Component", "@Directive", "@Pipe"],
-      "correctOption": 0,
-      "points": 10
-    },
-    {
-      "question": "What is the purpose of the 'ngClass' directive?",
-      "options": [
-        "Binding CSS classes",
-        "Event handling",
-        "Conditional rendering",
-        "Looping"
-      ],
       "correctOption": 0,
       "points": 10
     }
