@@ -23,11 +23,6 @@ Welcome to the Quiz App! This application allows users to take quizzes on variou
    ```bash
    npm install
    ```
-4. Start the server:
-   ```bash
-   npm run server
-   ```
-
 ## Usage
 
 1. Start the application:

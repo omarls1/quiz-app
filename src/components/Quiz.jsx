@@ -91,8 +91,10 @@ export default function Quiz({ path }) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch(`http://localhost:8000${path}`);
-        const data = await res.json();
+        const res = await fetch(
+          "https://raw.githubusercontent.com/omarls1/quiz-app/refs/heads/main/src/data/db.json"
+        );
+        const data = (await res.json())[path.slice(1)].slice(1);
         dispatch({ type: "dataReceived", payload: data });
       } catch (err) {
         dispatch({ type: "dataFailed" });

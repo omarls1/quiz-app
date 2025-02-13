@@ -246,6 +246,17 @@
       ],
       "correctOption": 0,
       "points": 10
+    },
+    {
+      "question": "What is the purpose of the 'v-show' directive?",
+      "options": [
+        "Conditional rendering",
+        "Looping",
+        "Event handling",
+        "Two-way data binding"
+      ],
+      "correctOption": 0,
+      "points": 10
     }
   ],
   "angular": [
@@ -358,6 +369,17 @@
       "options": [
         "Looping",
         "Conditional rendering",
+        "Event handling",
+        "Two-way data binding"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the 'ngSwitch' directive?",
+      "options": [
+        "Conditional rendering",
+        "Looping",
         "Event handling",
         "Two-way data binding"
       ],
