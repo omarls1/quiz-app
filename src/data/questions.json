@@ -1,0 +1,368 @@
+{
+  "react": [
+    {
+      "question": "Which is the most popular JavaScript framework?",
+      "options": ["Angular", "React", "Svelte", "Vue"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which company invented React?",
+      "options": ["Google", "Apple", "Netflix", "Facebook"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What's the fundamental building block of React apps?",
+      "options": ["Components", "Blocks", "Elements", "Effects"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What's the name of the syntax we use to describe the UI in React components?",
+      "options": ["FBJ", "Babel", "JSX", "ES2015"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How does data flow naturally in React apps?",
+      "options": [
+        "From parents to children",
+        "From children to parents",
+        "Both ways",
+        "The developers decides"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How to pass data into a child component?",
+      "options": ["State", "Props", "PropTypes", "Parameters"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "When to use derived state?",
+      "options": [
+        "Whenever the state should not trigger a re-render",
+        "Whenever the state can be synchronized with an effect",
+        "Whenever the state should be accessible to all components",
+        "Whenever the state can be computed from another state variable"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "What triggers a UI re-render in React?",
+      "options": [
+        "Running an effect",
+        "Passing props",
+        "Updating state",
+        "Adding event listeners to DOM elements"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "When do we directly \"touch\" the DOM in React?",
+      "options": [
+        "When we need to listen to an event",
+        "When we need to change the UI",
+        "When we need to add styles",
+        "Almost never"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "In what situation do we use a callback to update state?",
+      "options": [
+        "When updating the state will be slow",
+        "When the updated state is very data-intensive",
+        "When the state update should happen faster",
+        "When the new state depends on the previous state"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "If we pass a function to useState, when will that function be called?",
+      "options": [
+        "On each re-render",
+        "Each time we update the state",
+        "Only on the initial render",
+        "The first time we update the state"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "Which hook to use for an API request on the component's initial render?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which variables should go into the useEffect dependency array?",
+      "options": [
+        "Usually none",
+        "All our state variables",
+        "All state and props referenced in the effect",
+        "All variables needed for clean up"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "An effect will always run on the initial render.",
+      "options": [
+        "True",
+        "It depends on the dependency array",
+        "False",
+        "In depends on the code in the effect"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "When will an effect run if it doesn't have a dependency array?",
+      "options": [
+        "Only when the component mounts",
+        "Only when the component unmounts",
+        "The first time the component re-renders",
+        "Each time the component is re-rendered"
+      ],
+      "correctOption": 3,
+      "points": 20
+    }
+  ],
+  "vuejs": [
+    {
+      "question": "What is Vue.js?",
+      "options": ["A library", "A framework", "A language", "A database"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Who created Vue.js?",
+      "options": ["Evan You", "Dan Abramov", "Jordan Walke", "Ryan Dahl"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the command to create a new Vue project?",
+      "options": ["vue create", "vue init", "vue new", "vue start"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which directive is used for conditional rendering in Vue?",
+      "options": ["v-if", "v-for", "v-show", "v-bind"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you pass data to a child component in Vue?",
+      "options": ["Props", "State", "Events", "Methods"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is Vuex used for?",
+      "options": ["Routing", "State management", "Styling", "Testing"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which lifecycle hook is called after the component is mounted?",
+      "options": ["created", "mounted", "updated", "destroyed"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the 'v-model' directive?",
+      "options": [
+        "Two-way data binding",
+        "Event handling",
+        "Conditional rendering",
+        "Looping"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you define a method in a Vue component?",
+      "options": ["methods", "computed", "watch", "data"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the 'v-bind' directive?",
+      "options": [
+        "Binding HTML attributes",
+        "Event handling",
+        "Conditional rendering",
+        "Looping"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which Vue CLI command is used to serve a project?",
+      "options": ["vue serve", "vue run", "npm start", "npm serve"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How do you listen to events in Vue?",
+      "options": ["v-on", "v-bind", "v-if", "v-for"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is a Vue component?",
+      "options": [
+        "A reusable piece of UI",
+        "A directive",
+        "A plugin",
+        "A mixin"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you create a computed property in Vue?",
+      "options": ["computed", "methods", "watch", "data"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the 'v-for' directive?",
+      "options": [
+        "Looping",
+        "Conditional rendering",
+        "Event handling",
+        "Two-way data binding"
+      ],
+      "correctOption": 0,
+      "points": 10
+    }
+  ],
+  "angular": [
+    {
+      "question": "What is Angular?",
+      "options": ["A library", "A framework", "A language", "A database"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Who developed Angular?",
+      "options": ["Facebook", "Google", "Microsoft", "Apple"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the command to create a new Angular project?",
+      "options": ["ng new", "ng create", "ng init", "ng start"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which directive is used for conditional rendering in Angular?",
+      "options": ["*ngIf", "*ngFor", "*ngShow", "*ngBind"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you pass data to a child component in Angular?",
+      "options": ["@Input", "@Output", "@State", "@Props"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is Angular CLI used for?",
+      "options": [
+        "Routing",
+        "State management",
+        "Project scaffolding",
+        "Testing"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which lifecycle hook is called after the component is initialized?",
+      "options": ["ngOnInit", "ngAfterViewInit", "ngOnChanges", "ngOnDestroy"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the 'ngModel' directive?",
+      "options": [
+        "Two-way data binding",
+        "Event handling",
+        "Conditional rendering",
+        "Looping"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you define a service in Angular?",
+      "options": ["@Injectable", "@Component", "@Directive", "@Pipe"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the 'ngClass' directive?",
+      "options": [
+        "Binding CSS classes",
+        "Event handling",
+        "Conditional rendering",
+        "Looping"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which Angular CLI command is used to serve a project?",
+      "options": ["ng serve", "ng run", "npm start", "npm serve"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you listen to events in Angular?",
+      "options": ["(event)", "[event]", "{event}", "*event"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is an Angular component?",
+      "options": [
+        "A reusable piece of UI",
+        "A directive",
+        "A service",
+        "A module"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you create a pipe in Angular?",
+      "options": ["@Pipe", "@Component", "@Directive", "@Service"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of the 'ngFor' directive?",
+      "options": [
+        "Looping",
+        "Conditional rendering",
+        "Event handling",
+        "Two-way data binding"
+      ],
+      "correctOption": 0,
+      "points": 10
+    }
+  ]
+}
