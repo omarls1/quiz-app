@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Quiz from "./components/Quiz";
 import Hello from "./components/Hello";
+import { QuizProvider } from "./contexts/QuizContext";
 
 function App() {
   const [path, setPath] = useState(window.location.pathname);
@@ -20,7 +21,9 @@ function App() {
   return (
     <div className="app">
       {path === "/react" || path === "/angular" || path === "/vuejs" ? (
-        <Quiz path={path} />
+        <QuizProvider>
+          <Quiz path={path} />
+        </QuizProvider>
       ) : (
         <Hello onSetPath={setPath} />
       )}

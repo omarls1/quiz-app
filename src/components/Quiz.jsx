@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { useEffect } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
@@ -10,84 +10,16 @@ import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
 import Footer from "./Footer";
 import Timer from "./Timer";
+import { useQuiz } from "../contexts/QuizContext";
 
-const SECS_PER_QUESTION = 30;
-
-const initialState = {
-  questions: [],
-  status: "loading", // loading, error , ready, active,finished
-  current: 0,
-  answer: null,
-  timer: null,
-  points: 0,
-  secondsRemaining: 10,
-  highscore: Number(localStorage.getItem("score")),
-};
-function reducer(state, action) {
-  switch (action.type) {
-    case "dataReceived":
-      return { ...state, questions: action.payload, status: "ready" };
-    case "dataFailed":
-      return { ...state, status: "error" };
-
-    case "startQuiz":
-      return {
-        ...state,
-        status: "active",
-        secondsRemaining: state.questions.length * SECS_PER_QUESTION,
-      };
-    case "newAnswer":
-      const question = state.questions[state.current];
-      return {
-        ...state,
-        answer: action.payload,
-        points:
-          action.payload === question.correctOption
-            ? state.points + question.points
-            : state.points,
-      };
-    case "nextQuestion":
-      return {
-        ...state,
-        answer: null,
-        current: state.current + 1,
-      };
-
-    case "finish":
-      if (state.points > state.highscore)
-        localStorage.setItem("score", state.points);
-      return {
-        ...state,
-        status: "finished",
-        highscore: localStorage.getItem("score"),
-      };
-    case "restart":
-      return {
-        ...initialState,
-        questions: state.questions,
-        status: "ready",
-        secondsRemaining: null,
-      };
-    case "tick":
-      return {
-        ...state,
-        secondsRemaining: state.secondsRemaining - 1,
-        status: state.secondsRemaining === 0 ? "finished" : state.status,
-      };
-    default:
-      throw new Error(`Unrecognized action: ${action.type}`);
-  }
-}
 export default function Quiz({ path }) {
-  const [
-    { questions, status, current, answer, points, highscore, secondsRemaining },
+  const {
+    status,
+   
     dispatch,
-  ] = useReducer(reducer, initialState);
+  } = useQuiz();
 
-  const maxPossiblePoints = questions.reduce(
-    (prev, curr) => prev + curr.points,
-    0
-  );
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -101,7 +33,7 @@ export default function Quiz({ path }) {
       }
     }
     fetchData();
-  }, [path]);
+  }, [path, dispatch]);
 
   const handleExit = () => {
     window.history.pushState({}, "", "/");
@@ -115,35 +47,14 @@ export default function Quiz({ path }) {
       <Main>
         {status === "loading" && <Loader />}
         {status === "error" && <Error />}
-        {status === "ready" && (
-          <StartScreen
-            name={path}
-            numQuestions={questions.length}
-            onStart={dispatch}
-          />
-        )}
+        {status === "ready" && <StartScreen name={path} />}
         {status === "active" && (
           <>
-            <Progress
-              current={current}
-              numQuestions={questions.length}
-              points={points}
-              maxPossiblePoints={maxPossiblePoints}
-              answer={answer}
-            />
-            <Question
-              question={questions[current]}
-              dispatch={dispatch}
-              answer={answer}
-            />
+            <Progress />
+            <Question />
             <Footer>
-              <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
-              <NextButton
-                dispatch={dispatch}
-                answer={answer}
-                numQuestions={questions.length}
-                current={current}
-              />
+              <Timer />
+              <NextButton />
               <button
                 className="btn btn-ui"
                 style={{ marginRight: "10px" }}
@@ -154,14 +65,7 @@ export default function Quiz({ path }) {
             </Footer>
           </>
         )}
-        {status === "finished" && (
-          <FinishScreen
-            points={points}
-            maxPossiblePoints={maxPossiblePoints}
-            highscore={highscore}
-            dispatch={dispatch}
-          />
-        )}
+        {status === "finished" && <FinishScreen />}
       </Main>
     </>
   );

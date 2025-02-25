@@ -1,4 +1,7 @@
-function StartScreen({ numQuestions, onStart, name }) {
+import { useQuiz } from "../contexts/QuizContext";
+
+function StartScreen({ name }) {
+  const { numQuestions, dispatch } = useQuiz();
   const navigateToHome = () => {
     window.history.pushState({}, "", "/");
     const navEvent = new PopStateEvent("popstate");
@@ -16,7 +19,7 @@ function StartScreen({ numQuestions, onStart, name }) {
       <div className="button-row">
         <button
           className="btn btn-ui"
-          onClick={() => onStart({ type: "startQuiz" })}
+          onClick={() => dispatch({ type: "startQuiz" })}
         >
           Let's start! 🎬
         </button>
